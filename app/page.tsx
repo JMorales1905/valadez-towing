@@ -125,8 +125,8 @@ export default function Home() {
         <section className="p-6 bg-gray-100">
           <div className="flex items-center justify-around">
             <h2>Call Us:</h2>
-            <div className="flex space-x-8">
-              <h2 className="align-content-middle">Follow Us!</h2>
+            <div className="flex space-x-8 items-center">
+              <h2 className="">Follow Us!</h2>
               <a
                 href="https://www.facebook.com/search/top?q=valadez%20towing"
                 className="p-3 bg-blue-500 text-white rounded-md shadow-md hover:bg-blue-600 transition"
