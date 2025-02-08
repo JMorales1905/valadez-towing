@@ -61,7 +61,7 @@ export default function Home() {
         <div className="max-w-sm mx-auto bg-white shadow-lg rounded-lg overflow-hidden text-center">
           <div className="">
             <Image
-              src={"/images/photo-5.jpg"}
+              src={"/images/photo-5.JPG"}
               width={800}
               height={800}
               alt="Picture of Tow Truck"
