@@ -74,7 +74,7 @@ export default function Home() {
         <div className="max-w-sm mx-auto bg-white shadow-lg rounded-lg overflow-hidden text-center">
           <div className="">
             <Image
-              src="/images/photo-4.jpg"
+              src="/images/photo-4.JPG"
               width={800}
               height={800}
               alt="Picture of Tow Truck"
@@ -86,7 +86,7 @@ export default function Home() {
         <div className="max-w-sm mx-auto bg-white shadow-lg rounded-lg overflow-hidden text-center">
           <div className="">
             <Image
-              src="/images/photo-3.jpg"
+              src="/images/photo-3.JPG"
               width={800}
               height={800}
               alt="Picture of Tow Truck"
@@ -108,7 +108,7 @@ export default function Home() {
 
       <section className="p-6" id="about-us">
         <div className="flex">
-          <Image src="/images/photo-1.jpg" alt="photo-1" width={1000} height={1000} className="px-6" />
+          <Image src="/images/photo-1.JPG" alt="photo-1" width={1000} height={1000} className="px-6" />
           <div className="flex-1 justify-cnter content-center">
             <h2 className="flex justify-center text-5xl font-bold my-6">Inidividualy Owned and Operated</h2>
             <p className="text-center text-3xl">Valadez Towing was founded by <span className="text-red-800 font-bold">Jose Valadez</span>, aiming to serve the people of
