@@ -1,6 +1,4 @@
-import { url } from "inspector";
 import Image from "next/image";
-import Link from "next/link";
 
 
 export default function Home() {
@@ -10,10 +8,10 @@ export default function Home() {
     <div className="text-black">
       <nav className="py-4 px-8 shadow-md shadow-gray-700 bg-gray-100 fixed w-screen">
         <div className="mx-auto flex justify-between items-center">
-          <a href="#" className=" text-xl font-bold">
+          <a href="#" className="lg:flex-1 w-screen justify-center flex lg:justify-start">
             <Image src={"/images/logo.png"} alt="logo" height={100} width={100} />
           </a>
-          <ul className="flex space-x-4 text-xl">
+          <ul className="flex-1 space-x-4 text-2xl justify-around hidden lg:flex">
             <li><a href="#services" className="hover:text-red-800">Services</a></li>
             <li><a href="#gallery" className=" hover:text-red-800">Gallery</a></li>
             <li><a href="#about-us" className=" hover:text-red-800">About Us</a></li>
@@ -22,33 +20,35 @@ export default function Home() {
       </nav>
 
       {/* Hero */}
-      <section className="text-center py-20">
-        <div className="container mx-auto mt-[60px]">
-          <h1 className="uppercase mb-10 font-bold text-8xl" id="home">
-            {/* <img src="/images/tow.jpg" alt="back-tow" width={400} height={400} className="absolute opacity-50 right-{850]" /> */}
-            <span className="text-red-800" >valadez</span> towing
-          </h1>
-          <h2 className="text-4xl font-bold">For All Your Towing Needs, <span className="text-red-600 underline">24 HOURS</span> a Day</h2>
-          <p className="mt-4 text-2xl">Valadez Towing is a family owned operating business. We transport vehicles,
-            equipment and other cargo anywhere in the Coachella Valley. <br />Want a free quote?
-            Give us a call or email us!
-          </p>
+      <section className="text-center pt-20">
+        <div className="container mx-auto lg:mt-[60px]">
+          <div className="uppercase lg:pb-10 font-bold lg:text-8xl text-4xl lg:h-[30vh] h-[15vh] flex justify-center items-center underline" id="home">
+            <img src="/images/back-logo.png" alt="back-tow" width={380} height={300} className="absolute -z-10 object-top lg:hidden opacity-50" />
+            <img src="/images/back-logo.png" alt="back-tow" width={1500} height={300} className="absolute -z-10 left-[15%] opacity-50 top-[8%] hidden lg:block" />
+            <h1>valadez towing</h1>
+          </div>
+          <div className="w-screen bg-white grid">
+            <h2 className="lg:text-4xl font-bold bg-white lg:py-6">For All Your Towing Needs, <span className="text-red-600 underline">24 HOURS</span> a Day</h2>
+            <p className="lg:py-4 lg:text-2xl bg-white ">Valadez Towing is a family owned operating business. We transport vehicles,
+              equipment and other cargo anywhere in the Coachella Valley. <br />Want a free quote?
+              Give us a call or email us!
+            </p>
+          </div>
         </div>
 
-        {/* Cards */}
-        <div className="my-8 px-[20%]" id="services">
-          <div className="flex gap-x-10 justify-center items-center border-y-2 rounded-2xl p-6 shadow-lg shadow-gray-700">
+        <div className="py-8 px-[20%] bg-white" id="services">
+          <div className="flex gap-x-10 justify-center items-center lg:border-y-2 rounded-2xl lg:p-6 lg:shadow-lg lg:shadow-gray-700">
             <div className="font-bold w-[400px] rounded-lg overflow-hidden">
-              <div className="p-6">
-                <h2 className="text-black text-2xl font-bold">Call Us!</h2>
-                <p className="text-black mt-2 text-2xl font-medium">(909) 419-9806</p>
+              <div className="lg:p-6 lg:text-2xl">
+                <h2 className="text-black font-bold p-4 lg:p-0 shadow-lg lg:shadow-none shadow-slate-800 lg:shadow-transparent rounded-lg">Call Us!</h2>
+                <p className="text-black mt-2 font-medium hidden lg:block">(909) 419-9806</p>
               </div>
             </div>
-            <p className="text-3xl ">OR</p>
+            <p className="lg:text-3xl hidden lg:block">OR</p>
             <div className="w-[400px] rounded-lg overflow-hidden">
-              <div className="p-6">
-                <h2 className="text-2xl font-bold text-black">Email Us!</h2>
-                <p className="mt-2 text-2xl font-medium text-black">jose@valadeztowing.com</p>
+              <div className="lg:p-6 lg:text-2xl">
+                <h2 className="font-bold text-black">Email Us!</h2>
+                <p className="mt-2 font-medium text-black hidden lg:block">jose@valadeztowing.com</p>
               </div>
             </div>
           </div>
@@ -108,7 +108,7 @@ export default function Home() {
 
       <section className="p-6" id="about-us">
         <div className="flex">
-          <Image src="/images/photo-1.JPG" alt="photo-1" width={1000} height={1000} className="px-6" />
+          <Image src="/images/photo-1.JPG" alt="photo-1" width={1000} height={1000} className="px-6 hidden lg:block" />
           <div className="flex-1 justify-cnter content-center">
             <h2 className="flex justify-center text-5xl font-bold my-6">Inidividualy Owned and Operated</h2>
             <p className="text-center text-3xl">Valadez Towing was founded by <span className="text-red-800 font-bold">Jose Valadez</span>, aiming to serve the people of
