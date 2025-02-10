@@ -6,7 +6,7 @@ export default function Home() {
 
 
     <div className="text-black">
-      <nav className="py-4 px-8 shadow-md shadow-gray-700 bg-gray-100 fixed w-screen">
+      <nav className="py-4 px-8 shadow-md shadow-gray-700 bg-gray-100 fixed lg:w-screen">
         <div className="mx-auto flex justify-between items-center">
           <a href="#" className="lg:flex-1 w-screen justify-center flex lg:justify-start">
             <Image src={"/images/logo.png"} alt="logo" height={100} width={100} />
@@ -21,13 +21,13 @@ export default function Home() {
 
       {/* Hero */}
       <section className="text-center pt-20">
-        <div className="container mx-auto lg:mt-[60px]">
+        <div className="mx-auto lg:mt-[60px]">
           <div className="uppercase lg:pb-10 font-bold lg:text-8xl text-4xl lg:h-[30vh] h-[15vh] flex justify-center items-center underline" id="home">
             <img src="/images/back-logo.png" alt="back-tow" width={380} height={300} className="absolute -z-10 object-top lg:hidden opacity-50" />
             <img src="/images/back-logo.png" alt="back-tow" width={1500} height={300} className="absolute -z-10 left-[15%] opacity-50 top-[8%] hidden lg:block" />
             <h1>valadez towing</h1>
           </div>
-          <div className="w-screen bg-white grid">
+          <div className="bg-white grid">
             <h2 className="lg:text-4xl font-bold bg-white lg:py-6">For All Your Towing Needs, <span className="text-red-600 underline">24 HOURS</span> a Day</h2>
             <p className="lg:py-4 lg:text-2xl bg-white ">Valadez Towing is a family owned operating business. We transport vehicles,
               equipment and other cargo anywhere in the Coachella Valley. <br />Want a free quote?
