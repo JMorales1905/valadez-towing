@@ -6,15 +6,15 @@ export default function Home() {
 
 
     <div className="text-black">
-      <nav className="py-4 px-8 shadow-md shadow-gray-700 bg-gray-100 fixed lg:w-screen">
+      <nav className="py-4 lg:px-8 shadow-md shadow-gray-700 bg-gray-100 fixed lg:w-screen">
         <div className="mx-auto flex justify-between items-center">
           <a href="#" className="lg:flex-1 w-screen justify-center flex lg:justify-start">
             <Image src={"/images/logo.png"} alt="logo" height={100} width={100} />
           </a>
           <ul className="flex-1 space-x-4 text-2xl justify-around hidden lg:flex">
-            <li><a href="#services" className="hover:text-red-800">Services</a></li>
-            <li><a href="#gallery" className=" hover:text-red-800">Gallery</a></li>
-            <li><a href="#about-us" className=" hover:text-red-800">About Us</a></li>
+            <li><a href="#services" className="hover:text-red-800 hover:underline">Services</a></li>
+            <li><a href="#gallery" className=" hover:text-red-800 hover:underline">Gallery</a></li>
+            <li><a href="#about-us" className=" hover:text-red-800 hover:underline">About Us</a></li>
           </ul>
         </div>
       </nav>
@@ -36,29 +36,35 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="py-8 px-[20%] bg-white" id="services">
-          <div className="flex gap-x-10 justify-center items-center lg:border-y-2 rounded-2xl lg:p-6 lg:shadow-lg lg:shadow-gray-700">
-            <div className="font-bold w-[400px] rounded-lg overflow-hidden">
-              <div className="lg:p-6 lg:text-2xl">
+        <div className="lg:py-8 lg:p-6 px-[20%] bg-white" id="services">
+          <div className="lg:flex hidden gap-x-10 justify-center items-center lg:border-y-2 rounded-2xl lg:p-6 lg:shadow-lg lg:shadow-gray-700">
+            <a className="w-[400px] rounded-lg overflow-hidden" href="tel:9094199806">
+              <div className="lg:p-6 lg:text-2xl hidden lg:block">
                 <h2 className="text-black font-bold p-4 lg:p-0 shadow-lg lg:shadow-none shadow-slate-800 lg:shadow-transparent rounded-lg">Call Us!</h2>
                 <p className="text-black mt-2 font-medium hidden lg:block">(909) 419-9806</p>
               </div>
-            </div>
+            </a>
             <p className="lg:text-3xl hidden lg:block">OR</p>
-            <div className="w-[400px] rounded-lg overflow-hidden">
+            <a className="w-[400px] rounded-lg overflow-hidden" href="emailto:jose@valadeztowing.com">
               <div className="lg:p-6 lg:text-2xl">
                 <h2 className="font-bold text-black">Email Us!</h2>
-                <p className="mt-2 font-medium text-black hidden lg:block">jose@valadeztowing.com</p>
+                <p className="mt-2 font-medium text-black hidden lg:block hover:underline hover:text-red-600">jose@valadeztowing.com</p>
               </div>
-            </div>
+            </a>
           </div>
+        </div>
+
+        {/* Phone section */}
+        <div className="p-6 lg:hidden flex justify-center gap-x-6">
+          <a href="tel:9094199806" className="p-4 bg-red-300 rounded-lg active:bg-red-800">Call Us!</a>
+          <a href="mailto:jose@valadeztowing.com" className="p-4 bg-red-300 rounded-lg active:bg-red-800">Email Us!</a>
         </div>
       </section>
 
       {/* Cards */}
-      <h1 className="flex justify-center text-7xl content-center p-4 bg-gray-100">Services</h1>
-      <section className="flex p-2 mb-[30px] bg-gray-100">
-        <div className="max-w-sm mx-auto bg-white shadow-lg rounded-lg overflow-hidden text-center">
+      <h1 className="lg:flex justify-center lg:text-7xl text-2xl content-center p-4 bg-gray-100 hidden">Services</h1>
+      <section className="flex p-2 lg:pb-[30px] lg:bg-gray-100">
+        <div className="max-w-sm mx-auto bg-white shadow-lg rounded-lg overflow-hidden hidden lg:block text-center">
           <div className="">
             <Image
               src={"/images/photo-5.JPG"}
@@ -71,7 +77,7 @@ export default function Home() {
             <a href="#" className="my-4 inline-block bg-blue-600  px-6 py-2 rounded-lg hover:bg-blue-700">Info</a>
           </div>
         </div>
-        <div className="max-w-sm mx-auto bg-white shadow-lg rounded-lg overflow-hidden text-center">
+        <div className="max-w-sm mx-auto bg-white shadow-lg rounded-lg overflow-hidden text-center hidden lg:block">
           <div className="">
             <Image
               src="/images/photo-4.JPG"
@@ -83,7 +89,7 @@ export default function Home() {
             <a href="#" className="my-4 inline-block bg-blue-600  px-6 py-2 rounded-lg hover:bg-blue-700">Info</a>
           </div>
         </div>
-        <div className="max-w-sm mx-auto bg-white shadow-lg rounded-lg overflow-hidden text-center">
+        <div className="max-w-sm mx-auto bg-white shadow-lg rounded-lg overflow-hidden text-center hidden lg:block">
           <div className="">
             <Image
               src="/images/photo-3.JPG"
@@ -97,9 +103,56 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="grid gap-y-4 lg:hidden">
+        <h1 className="flex justify-center lg:text-7xl text-2xl content-center p-4 bg-gray-100">Services</h1>
+
+        {/* Phone image 1 */}
+        <div className="max-w-[200px] mx-auto bg-white shadow-lg rounded-lg overflow-hidden p-4 active:bg-red-300">
+          <div className="grid">
+            <Image
+              src={"/images/photo-5.JPG"}
+              width={210}
+              height={800}
+              alt="Picture of Tow Truck"
+              className="hover:scale-105 transition-all ease-in-out"
+            />
+            <h2 className="text-xl font-bold text-gray-800 text-center p-2">Light-duty Towing</h2>
+          </div>
+        </div>
+
+        {/* Phone image 2 */}
+        <div className="max-w-[200px] mx-auto bg-white shadow-lg rounded-lg overflow-hidden p-4 active:bg-red-300">
+          <div className="grid">
+            <Image
+              src={"/images/photo-4.JPG"}
+              width={210}
+              height={800}
+              alt="Picture of Tow Truck"
+              className="hover:scale-105 transition-all ease-in-out"
+            />
+            <h2 className="text-xl font-bold text-gray-800 text-center p-2">Heavy-duty Towing</h2>
+          </div>
+        </div>
+
+        {/* Phone image 3 */}
+        <div className="max-w-[200px] mx-auto bg-white shadow-lg rounded-lg overflow-hidden p-4 active:bg-red-300">
+          <div className="grid">
+            <Image
+              src={"/images/photo-2.JPG"}
+              width={210}
+              height={800}
+              alt="Picture of Tow Truck"
+              className="hover:scale-105 transition-all ease-in-out"
+            />
+            <h2 className="text-xl font-bold text-gray-800 text-center p-2">Equipment Transportation</h2>
+          </div>
+        </div>
+      </section>
+
+
       {/* Image Gallery */}
-      <h1 className="text-7xl flex justify-center" id="gallery"> Gallery </h1>
-      <section className="h-[100vh]">
+      <section className="lg:h-[100vh] my-4">
+        <h1 className="lg:text-7xl text-2xl flex justify-center p-4" id="gallery"> Gallery </h1>
         <div>
 
         </div>
@@ -110,8 +163,8 @@ export default function Home() {
         <div className="flex">
           <Image src="/images/photo-1.JPG" alt="photo-1" width={1000} height={1000} className="px-6 hidden lg:block" />
           <div className="flex-1 justify-cnter content-center">
-            <h2 className="flex justify-center text-5xl font-bold my-6">Inidividualy Owned and Operated</h2>
-            <p className="text-center text-3xl">Valadez Towing was founded by <span className="text-red-800 font-bold">Jose Valadez</span>, aiming to serve the people of
+            <h2 className="flex justify-center lg:text-5xl text-2xl font-bold text-center my-6">Inidividualy Owned and Operated</h2>
+            <p className="text-center lg:text-3xl">Valadez Towing was founded by <span className="text-red-800 font-bold">Jose Valadez</span>, aiming to serve the people of
               and the surrounding areas of the Coachella Valley for all towing needs. Our number one objective when you
               call us is
               to ensure our customers and their vehicles are safetly transported. Choose us as your favorite towing and recovery
@@ -124,9 +177,9 @@ export default function Home() {
       <footer>
         <section className="p-6 bg-gray-100">
           <div className="flex items-center justify-around">
-            <h2>Call Us:</h2>
+            <a className="hidden lg:block lg:text-3xl" href="emailto:jose@valadeztowing.com">Mail Us: <span className="text-red-600 hover:underline underline-red-600">jose@valadeztowing.com</span></a>
             <div className="flex space-x-8 items-center">
-              <h2 className="">Follow Us!</h2>
+              <h2 className="hidden lg:block lg:text-3xl">Follow Us:</h2>
               <a
                 href="https://www.facebook.com/search/top?q=valadez%20towing"
                 className="p-3 bg-blue-500 text-white rounded-md shadow-md hover:bg-blue-600 transition"
@@ -141,6 +194,13 @@ export default function Home() {
                 aria-label="Instagram"
               >
                 <i className="fab fa-instagram fa-fw"></i>
+              </a>
+              <a
+                href="tel:9094199806"
+                className="p-3 lg:hidden bg-pink-500 text-white rounded-md shadow-md hover:bg-pink-600 transition"
+                aria-label="Phone"
+              >
+                <i className="fa-solid fa-phone"></i>
               </a>
             </div>
           </div>
