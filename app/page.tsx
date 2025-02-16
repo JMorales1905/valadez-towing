@@ -1,9 +1,18 @@
+'use client'
 import Image from "next/image";
-
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Home() {
-  return (
+  const pathname = usePathname();
 
+  const navItems = [
+    { label: 'Services', path: '#services' },
+    { label: 'Gallery', path: '#gallery' },
+    { label: 'About Us', path: '#about-us' }
+  ];
+
+  return (
 
     <div className="text-black">
       <nav className="py-4 lg:px-8 shadow-md shadow-gray-700 bg-gray-100 fixed lg:w-screen">
@@ -12,9 +21,13 @@ export default function Home() {
             <Image src={"/images/logo.png"} alt="logo" height={100} width={100} />
           </a>
           <ul className="flex-1 space-x-4 text-2xl justify-around hidden lg:flex">
-            <li><a href="#services" className="hover:text-red-800 hover:underline">Services</a></li>
-            <li><a href="#gallery" className=" hover:text-red-800 hover:underline">Gallery</a></li>
-            <li><a href="#about-us" className=" hover:text-red-800 hover:underline">About Us</a></li>
+            {navItems.map((item) => (
+              <li key={item.path}>
+                <Link href={item.path} className={pathname === item.path ? 'active' : 'active:bg-red-500 hover:bg-red-300 rounded-md p-4 transition-colors ease-in-out'}>
+                  {item.label}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
       </nav>
@@ -36,19 +49,19 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="lg:py-8 lg:p-6 px-[20%] bg-white" id="services">
+        <div className="lg:py-8 lg:p-6 px-[20%] bg-white " id="services">
           <div className="lg:flex hidden gap-x-10 justify-center items-center lg:border-y-2 rounded-2xl lg:p-6 lg:shadow-lg lg:shadow-gray-700">
-            <a className="w-[400px] rounded-lg overflow-hidden" href="tel:9094199806">
+            <div className="w-[400px] rounded-lg overflow-hidden">
               <div className="lg:p-6 lg:text-2xl hidden lg:block">
                 <h2 className="text-black font-bold p-4 lg:p-0 shadow-lg lg:shadow-none shadow-slate-800 lg:shadow-transparent rounded-lg">Call Us!</h2>
                 <p className="text-black mt-2 font-medium hidden lg:block">(909) 419-9806</p>
               </div>
-            </a>
+            </div>
             <p className="lg:text-3xl hidden lg:block">OR</p>
-            <a className="w-[400px] rounded-lg overflow-hidden" href="emailto:jose@valadeztowing.com">
-              <div className="lg:p-6 lg:text-2xl">
+            <a className="w-[400px] rounded-lg overflow-hidden" href="mailto:jose@valadeztowing.com">
+              <div className="lg:p-6 lg:text-2xl hover:bg-red-300 transition-colors active:bg-red-400 ease-in-out">
                 <h2 className="font-bold text-black">Email Us!</h2>
-                <p className="mt-2 font-medium text-black hidden lg:block hover:underline hover:text-red-600">jose@valadeztowing.com</p>
+                <p className="mt-2 font-medium text-black hidden lg:block">jose@valadeztowing.com</p>
               </div>
             </a>
           </div>
@@ -62,7 +75,7 @@ export default function Home() {
       </section>
 
       {/* Cards */}
-      <h1 className="lg:flex justify-center lg:text-7xl text-2xl content-center p-4 bg-gray-100 hidden">Services</h1>
+      <h1 className="lg:flex justify-center lg:text-7xl text-2xl content-center text-red-600 p-4 bg-gray-100 hidden">Services</h1>
       <section className="flex p-2 lg:pb-[30px] lg:bg-gray-100">
         <div className="max-w-sm mx-auto bg-white shadow-lg rounded-lg overflow-hidden hidden lg:block text-center">
           <div className="">
@@ -71,7 +84,7 @@ export default function Home() {
               width={800}
               height={800}
               alt="Picture of Tow Truck"
-              className="hover:scale-105 transition-all ease-in-out"
+              className=""
             />
             <h2 className="text-2xl font-bold text-gray-800">Light-duty Towing</h2>
             <a href="#" className="my-4 inline-block bg-blue-600  px-6 py-2 rounded-lg hover:bg-blue-700">Info</a>
@@ -150,18 +163,11 @@ export default function Home() {
       </section>
 
 
-      {/* Image Gallery */}
-      <section className="lg:h-[100vh] my-4">
-        <h1 className="lg:text-7xl text-2xl flex justify-center p-4" id="gallery"> Gallery </h1>
-        <div>
-
-        </div>
-      </section>
 
 
-      <section className="p-6" id="about-us">
+      <section className="p-6 bg-red-100 border-y-2 border-black" id="about-us">
         <div className="flex">
-          <Image src="/images/photo-1.JPG" alt="photo-1" width={1000} height={1000} className="px-6 hidden lg:block" />
+          <Image src="/images/photo-1.JPG" alt="photo-1" width={900} height={1000} className="px-6 hidden lg:block" />
           <div className="flex-1 justify-cnter content-center">
             <h2 className="flex justify-center lg:text-5xl text-2xl font-bold text-center my-6">Inidividualy Owned and Operated</h2>
             <p className="text-center lg:text-3xl">Valadez Towing was founded by <span className="text-red-800 font-bold">Jose Valadez</span>, aiming to serve the people of
@@ -173,11 +179,31 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Image Gallery */}
+      <section className="p-6 bg-slate-200 border-b-2 border-black" id="gallery">
+        <div className="flex">
+          <div className="flex-1 justify-cnter content-center">
+            <h2 className="flex justify-center lg:text-5xl text-2xl font-bold text-center my-6">How We Do It</h2>
+            <p className="text-center lg:text-3xl">From you house or from anywhere in the city, we can offer you our services when you most need it.
+
+            </p>
+          </div>
+          {/* <video width="900" height="1000" controls preload="none">
+            <source src="/images/towing.mp4" type="video/mp4" />
+            <track
+              src="/path/to/captions.vtt"
+              kind="subtitles"
+              srcLang="en"
+              label="English"
+            />
+            Your browser does not support the video tag.
+          </video> */}
+        </div>
+      </section>
 
       <footer>
-        <section className="p-6 bg-gray-100">
+        <section className="p-6 bg-red-100">
           <div className="flex items-center justify-around">
-            <a className="hidden lg:block lg:text-3xl" href="emailto:jose@valadeztowing.com">Mail Us: <span className="text-red-600 hover:underline underline-red-600">jose@valadeztowing.com</span></a>
             <div className="flex space-x-8 items-center">
               <h2 className="hidden lg:block lg:text-3xl">Follow Us:</h2>
               <a
@@ -206,6 +232,6 @@ export default function Home() {
           </div>
         </section>
       </footer>
-    </div>
+    </div >
   );
 }
