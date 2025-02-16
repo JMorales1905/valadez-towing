@@ -116,7 +116,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="grid gap-y-4 lg:hidden">
+      <section className="grid gap-y-4 lg:hidden pb-6">
         <h1 className="flex justify-center lg:text-7xl text-2xl content-center p-4 bg-gray-100">Services</h1>
 
         {/* Phone image 1 */}
