@@ -200,7 +200,7 @@ export default function Home() {
           </video>
 
           {/* Phone Version */}
-          <video width="500" height="500" controls preload="none" className="p-6">
+          <video width="500" height="500" controls preload="none" className="p-6 lg:hidden">
             <source src="/images/towing.mp4" type="video/mp4" />
             <track
               src="/path/to/captions.vtt"
