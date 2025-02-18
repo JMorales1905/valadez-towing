@@ -188,7 +188,7 @@ export default function Home() {
 
             </p>
           </div>
-          <video width="900" height="1000" controls preload="none" className="hidden lg:block">
+          <video width="900" height="1000" controls preload="none" loop autoPlay muted className="hidden lg:block">
             <source src="/images/towing.mp4" type="video/mp4" />
             <track
               src="/path/to/captions.vtt"
@@ -200,7 +200,7 @@ export default function Home() {
           </video>
 
           {/* Phone Version */}
-          <video width="500" height="500" controls preload="none" className="p-6 lg:hidden">
+          <video width="500" height="500" autoPlay muted playsInline loop controls preload="none" className="p-6 lg:hidden">
             <source src="/images/towing.mp4" type="video/mp4" />
             <track
               src="/path/to/captions.vtt"
