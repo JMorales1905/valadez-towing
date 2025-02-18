@@ -189,19 +189,7 @@ export default function Home() {
             </p>
           </div>
           <video width="900" height="1000" controls preload="none" loop autoPlay muted className="hidden lg:block">
-            <source src="/images/towing.mp4" type="video/mp4" />
-            <track
-              src="/path/to/captions.vtt"
-              kind="subtitles"
-              srcLang="en"
-              label="English"
-            />
-            Your browser does not support the video tag.
-          </video>
-
-          {/* Phone Version */}
-          <video width="500" height="500" autoPlay muted playsInline loop controls preload="none" className="p-6 lg:hidden">
-            <source src="/images/towing.mp4" type="video/mp4" />
+            <source src="/images/towing480.mp4" type="video/mp4" />
             <track
               src="/path/to/captions.vtt"
               kind="subtitles"
