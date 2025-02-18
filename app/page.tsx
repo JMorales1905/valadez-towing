@@ -188,10 +188,7 @@ export default function Home() {
 
             </p>
           </div>
-          <video width="900" height="1000" loop autoPlay muted className="hidden lg:block">
-            <source src="/images/towing480.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+          <iframe src="https://www.youtube.com/embed/19g66ezsKAg" allowFullScreen width={1000} height={400} />
         </div>
       </section>
 
