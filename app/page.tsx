@@ -181,14 +181,14 @@ export default function Home() {
 
       {/* Image Gallery */}
       <section className="p-6 bg-slate-200 border-b-2 border-black" id="gallery">
-        <div className="flex">
+        <div className="lg:flex grid">
           <div className="flex-1 justify-cnter content-center">
             <h2 className="flex justify-center lg:text-5xl text-2xl font-bold text-center my-6">How We Do It</h2>
             <p className="text-center lg:text-3xl">From you house or from anywhere in the city, we can offer you our services when you most need it.
 
             </p>
           </div>
-          {/* <video width="900" height="1000" controls preload="none">
+          <video width="900" height="1000" controls preload="none" className="hidden lg:block">
             <source src="/images/towing.mp4" type="video/mp4" />
             <track
               src="/path/to/captions.vtt"
@@ -197,7 +197,19 @@ export default function Home() {
               label="English"
             />
             Your browser does not support the video tag.
-          </video> */}
+          </video>
+
+          {/* Phone Version */}
+          <video width="500" height="500" controls preload="none" className="p-6">
+            <source src="/images/towing.mp4" type="video/mp4" />
+            <track
+              src="/path/to/captions.vtt"
+              kind="subtitles"
+              srcLang="en"
+              label="English"
+            />
+            Your browser does not support the video tag.
+          </video>
         </div>
       </section>
 
