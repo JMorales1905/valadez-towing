@@ -184,11 +184,12 @@ export default function Home() {
         <div className="lg:flex grid">
           <div className="flex-1 justify-cnter content-center">
             <h2 className="flex justify-center lg:text-5xl text-2xl font-bold text-center my-6">How We Do It</h2>
-            <p className="text-center lg:text-3xl">From you house or from anywhere in the city, we can offer you our services when you most need it.
+            <p className="text-center lg:text-3xl pb-4">From you house or from anywhere in the city, we can offer you our services when you most need it.
 
             </p>
           </div>
-          <iframe src="https://youtu.be/ZpOHh-vd2wc" allowFullScreen width={1000} height={400} />
+          <iframe className="hidden lg:block" width="560" height="315" src="https://www.youtube.com/embed/ZpOHh-vd2wc?si=sbLB5ghCTAM9MXEC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <iframe className="" width="350" height="315" src="https://www.youtube.com/embed/ZpOHh-vd2wc?si=sbLB5ghCTAM9MXEC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
       </section>
 
