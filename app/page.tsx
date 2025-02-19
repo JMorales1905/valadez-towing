@@ -188,7 +188,7 @@ export default function Home() {
 
             </p>
           </div>
-          <iframe className="hidden lg:block" width="560" height="315" src="https://www.youtube.com/embed/ZpOHh-vd2wc?si=sbLB5ghCTAM9MXEC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <iframe className="hidden lg:block" width="560" height="315" src="https://www.youtube.com/embed/ZpOHh-vd2wc?si=sbLB5ghCTAM9MXEC" allowFullScreen />
           {/* <iframe className="" width="350" height="315" src="https://www.youtube.com/embed/ZpOHh-vd2wc?si=sbLB5ghCTAM9MXEC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> */}
         </div>
       </section>
